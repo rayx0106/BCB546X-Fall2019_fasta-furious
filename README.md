@@ -14,7 +14,7 @@ This is the repository of the final project for Fasta & Furious. Inside are the 
 https://docs.google.com/presentation/d/1WagX6Mk48KvoV5h-uBQCnPhbDSnagouVUTd6ZwwnYpY/edit#slide=id.p
 
 ## Data
-###raw data
+### raw data
 
 ## Code
 
