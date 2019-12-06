@@ -1,4 +1,4 @@
-# Fasta-Furious
+# Fasta & Furious
 
 ## Team Members
 * David Ray
