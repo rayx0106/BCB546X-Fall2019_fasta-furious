@@ -17,3 +17,8 @@ Sequences of genes were subsequently aligned using the ClustalW alignment and th
 
 ## Technical details
 
+XXX Data was downloaded by the following unix code
+'''
+$
+'''
+
