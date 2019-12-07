@@ -19,8 +19,8 @@ Sequences of genes were subsequently aligned using the ClustalW alignment and th
 
 XXX Data was downloaded by the following unix code
 
-'''
+```
 # Downloading the first part of sequences{29}. 
 $ cat FPAC.txt | while read p; do echo $p; efetch -db nucleotide -id $p -format fasta > $p.fasta; done;
-'''
+```
 
