@@ -94,7 +94,7 @@ Entrez.email = "mahsa.askaryhemmat@gmail.com"  # Always tell NCBI who you are
 filename = "ASM14638v1_genomic.fna"
 if not os.path.isfile(filename):
     # Downloading...
-    net_handle = Entrez.efetch(db="assembly", id="ASM14638v1_genomic", rettype="fasta", retmode="text")
+    net_handle = Entrez.efetch(db="assembly", id="ASM14638v1", rettype="fasta", retmode="text")
     out_handle = open(filename, "w")
     out_handle.write(net_handle.read())
     out_handle.close()
