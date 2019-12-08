@@ -31,6 +31,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 ```
 $ cat FPAC.txt | while read p; do echo $p; efetch -db nucleotide -id $p -format fasta > $p.fasta; done;
 ```
+### install edirect
+
+```
+brew install homebrew/science/edirect
+```
+
 
 ### We also used biopython to download the data with the following code
 
