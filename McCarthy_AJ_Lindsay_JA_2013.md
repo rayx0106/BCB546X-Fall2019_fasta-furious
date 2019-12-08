@@ -37,7 +37,7 @@ XXX Data was downloaded by the following unix code
 $ cat FPAC.txt | while read p; do echo $p; efetch -db nucleotide -id $p -format fasta > $p.fasta; done;
 ```
 
-### We used biopython to download the data with the following code
+### We also used biopython to download the data with the following code
 
 ```
 pip install biopython #install biopython
