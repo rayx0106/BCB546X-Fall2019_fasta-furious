@@ -21,6 +21,18 @@ XXX Data was downloaded by the following unix code
 
 
 ### Downloading the first part of sequences(29 of 88). 
+
+
+#install homebrew with the following code
+```
+
+```
+
+#install edirect with the following code
+```
+
+```
+
 ```
 $ cat FPAC.txt | while read p; do echo $p; efetch -db nucleotide -id $p -format fasta > $p.fasta; done;
 ```
