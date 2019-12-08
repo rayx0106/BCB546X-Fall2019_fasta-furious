@@ -25,7 +25,7 @@ XXX Data was downloaded by the following unix code
 
 #### install homebrew with the following code
 ```
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)" #for Linux
 ```
 
 #### install edirect with the following code
