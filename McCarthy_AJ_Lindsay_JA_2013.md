@@ -23,17 +23,85 @@ XXX Data was downloaded by the following unix code
 ### Downloading the first part of sequences(29 of 88). 
 
 
-#install homebrew with the following code
+#### install homebrew with the following code
 ```
 
 ```
 
-#install edirect with the following code
+#### install edirect with the following code
 ```
 
 ```
 
 ```
 $ cat FPAC.txt | while read p; do echo $p; efetch -db nucleotide -id $p -format fasta > $p.fasta; done;
+```
+
+### We used biopython to download the data with the following code
+
+```
+pip install biopython #install biopython
+```
+
+```
+from Bio.Seq import Seq
+from Bio.Alphabet import IUPAC
+```
+
+
+
+```
+# this is a stupid way. it can be done with a for loop
+import os
+from Bio import SeqIO
+from Bio import Entrez
+Entrez.email = "mahsa.askaryhemmat@gmail.com"  # Always tell NCBI who you are
+filename = "TL_HE681097.fasta"
+if not os.path.isfile(filename):
+    # Downloading...
+    net_handle = Entrez.efetch(db="nucleotide", id="HE681097", rettype="fasta", retmode="text")
+    out_handle = open(filename, "w")
+    out_handle.write(net_handle.read())
+    out_handle.close()
+    net_handle.close()
+    print("Saved")
+print("Parsing...")
+record = SeqIO.read(filename, "fasta")
+print(record)
+
+Entrez.email = "mahsa.askaryhemmat@gmail.com"  # Always tell NCBI who you are
+filename = "TL_NC_002953.fasta"
+if not os.path.isfile(filename):
+    # Downloading...
+    net_handle = Entrez.efetch(db="nucleotide", id="NC_002953", rettype="fasta", retmode="text")
+    out_handle = open(filename, "w")
+    out_handle.write(net_handle.read())
+    out_handle.close()
+    net_handle.close()
+    print("Saved")
+print("Parsing...")
+record = SeqIO.read(filename, "fasta")
+print(record)
+```
+
+### For the assembly files, the folloing code from biopython.org didn't work
+
+```
+import os
+from Bio import SeqIO
+from Bio import Entrez
+Entrez.email = "mahsa.askaryhemmat@gmail.com"  # Always tell NCBI who you are
+filename = "ASM14638v1_genomic.fna"
+if not os.path.isfile(filename):
+    # Downloading...
+    net_handle = Entrez.efetch(db="assembly", id="ASM14638v1_genomic", rettype="fasta", retmode="text")
+    out_handle = open(filename, "w")
+    out_handle.write(net_handle.read())
+    out_handle.close()
+    net_handle.close()
+    print("Saved")
+print("Parsing...")
+record = SeqIO.read(filename, "assembly")
+print(record)
 ```
 
