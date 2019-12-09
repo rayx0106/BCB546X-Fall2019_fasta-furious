@@ -25,19 +25,20 @@ XXX Data was downloaded by the following unix code
 
 #### install homebrew with the following code
 ```
-
-```
-
-#### install edirect with the following code
-```
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)" #for Linux
 ```
 
 ```
 $ cat FPAC.txt | while read p; do echo $p; efetch -db nucleotide -id $p -format fasta > $p.fasta; done;
 ```
+### install edirect
 
-### We used biopython to download the data with the following code
+```
+brew install homebrew/science/edirect
+```
+
+
+### We also used biopython to download the data with the following code
 
 ```
 pip install biopython #install biopython
@@ -94,7 +95,7 @@ Entrez.email = "mahsa.askaryhemmat@gmail.com"  # Always tell NCBI who you are
 filename = "ASM14638v1_genomic.fna"
 if not os.path.isfile(filename):
     # Downloading...
-    net_handle = Entrez.efetch(db="assembly", id="ASM14638v1_genomic", rettype="fasta", retmode="text")
+    net_handle = Entrez.efetch(db="assembly", id="ASM14638v1", rettype="fasta", retmode="text")
     out_handle = open(filename, "w")
     out_handle.write(net_handle.read())
     out_handle.close()
