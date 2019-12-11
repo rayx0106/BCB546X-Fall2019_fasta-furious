@@ -121,7 +121,7 @@ But it cannot work very well.
 * we extract the identical regions by comparing the sequence with the following code ...
 
 ### Compare the genomes or contigs against the MSSA476 genome
-* We want to compare the genomes or contigs against the MSSA476 genome, that carries all 14 ssl genes, using the online Artemis comparison tool (WebACT, http://www.webact.org)
+* We want to compare the genomes or contigs against the MSSA476 genome, that carries all 14 ssl genes, using the online Artemis comparison tool (WebACT, http://www.webact.org). But unfortunately this link provided on the paper doesn't exist. And when we compare the sequence of the genomes or contigs against the MSSA476 genome. we cannot find the identical region.
 
 ### Aligning the sequence
 * Sequences of genes were subsequently aligned using the ClustalW alignment and then edited by hand. The MSSA476 genome possess all core variable genes studied and was therefore used as a reference genome to assign allelic variants
