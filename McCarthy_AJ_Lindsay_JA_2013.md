@@ -1,7 +1,5 @@
 # Introduction
-introduces the original paper, explains the technical details of your replication of analyses and summarizes your replication of the original results
 
-* We replicated 2.2 Sequence analysis of S. aureus genes.
 
 ## Original Paper
 
@@ -103,6 +101,50 @@ To download Assembly files, we used Batch Entrez and used the list of Accession 
 4. Click "Retrieve" button
 5. Save all files
 
+### Also, we find a code way to download these files with following one(Python)
+
+```
+def get_assembly_summary(id):
+    """Get esummary for an entrez id"""
+    from Bio import Entrez
+    esummary_handle = Entrez.esummary(db="assembly", id=id, report="full")
+    esummary_record = Entrez.read(esummary_handle)
+    return esummary_record
+
+def get_assemblies(term, download=True, path='assemblies'):
+    """Download genbank assemblies for a given search term.
+    Args:
+        term: search term, usually organism name
+        download: whether to download the results
+        path: folder to save to
+    """
+
+    from Bio import Entrez
+    #provide your own mail here
+    Entrez.email = "mahsa.askaryhemmat@gmail.com"
+    handle = Entrez.esearch(db="assembly", term=term, retmax='200')
+    record = Entrez.read(handle)
+    ids = record['IdList']
+    print (f'found {len(ids)} ids')
+    links = []
+    for id in ids:
+        #get summary
+        summary = get_assembly_summary(id)
+        #get ftp link
+        url = summary['DocumentSummarySet']['DocumentSummary'][0]['FtpPath_RefSeq']
+        if url == '':
+            continue
+        label = os.path.basename(url)
+        #get the fasta link - change this to get other formats
+        link = os.path.join(url,label+'_genomic.fna.gz')
+        print (link)
+        links.append(link)
+        if download == True:
+            #download link
+            urllib.request.urlretrieve(link, f'{label}.fna.gz')
+    return links
+```
+
 ### Merging two fasta files
 ```
 cat NC_017343.fasta NC_002953.fasta > mergedtwo.fasta
@@ -111,6 +153,12 @@ cat NC_017343.fasta NC_002953.fasta > mergedtwo.fasta
 
 ```
 blastn -query mergedtwo.fasta -subject flp.fasta > blast.txt
+```
+
+### Aligning two sequences
+
+```
+muscle -profile -in1 NC_017343.fasta -in2 NC_002953.3.fasta -out combinedAlignment.fasta
 ```
 * Firstly, we use python to convert the "fasta" file into a "bed" one with this https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/blob/master/Data_directory/Tim_convert_fasta_to_bed.ipynb
 But it cannot work very well.
@@ -121,7 +169,7 @@ But it cannot work very well.
 * we extract the identical regions by comparing the sequence with the following code ...
 
 ### Compare the genomes or contigs against the MSSA476 genome
-* We want to compare the genomes or contigs against the MSSA476 genome, that carries all 14 ssl genes, using the online Artemis comparison tool (WebACT, http://www.webact.org). But unfortunately this link provided on the paper doesn't exist. And when we compare the sequence of the genomes or contigs against the MSSA476 genome. we cannot find the identical region.
+* We want to compare the genomes or contigs against the MSSA476 genome, that carries all 14 ssl genes, using the online Artemis comparison tool (WebACT, http://www.webact.org). But unfortunately this link provided on the paper doesn't exist. And when we compare the sequence of the genomes or contigs against the MSSA476 genome. we cannot find the identical region either.
 
 ### Aligning the sequence
 * Sequences of genes were subsequently aligned using the ClustalW alignment and then edited by hand. The MSSA476 genome possess all core variable genes studied and was therefore used as a reference genome to assign allelic variants
