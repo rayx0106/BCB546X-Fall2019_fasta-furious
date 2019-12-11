@@ -5,28 +5,22 @@
 
 The article of “Staphylococcus aureus Innate Immune Evasion is Lineage-Specific: A Bioinfomatics Study” by Alex J.McCarthy and Jodi A.Lindsay, 2013 was used for our final project. https://www.sciencedirect.com/science/article/pii/S1567134813002372?via%3Dihub. We replicated part 2.2, “Sequence analysis of S. aureus genes”.
 
-The distribution and genetic variation of genes with characterised or hypothesized roles in inhibiting complement, chemotaxis or neutrophil function was investigated. In total, 43 genes were investigated as shown in XXXX.
+The distribution and genetic variation of genes with characterised or hypothesized roles in inhibiting complement, chemotaxis or neutrophil function was investigated.
 
 The sequence of each gene in each genome was identified using BLAST searches (www.ncbi.nlm.nih.giv/blast).
-
-The sequence of Staphylococcal superantigen-like (ssl) genes was identified firstly by using a BLAST search to identify ssl gene regions, and then secondly by comparing genomes or contigs against the MSSA476 genome, that carries all 14 ssl genes, using the online Artemis comparison tool
-
-Sequences of genes were subsequently aligned using the ClustalW alignment and then edited by hand (Hall, 1999). The MSSA476 genome possess all core variable genes studied and was therefore used as a reference genome to assign allelic variants. Individual gene sequences from the remaining genomes were compared against the MSSA476 gene sequence for SNPs and inserts and/or deletions (InDels). Each gene amino acid sequence was compared to the reference and all other sequences of that gene, and identified as variant if it was less than 80% or 90% homologous. Variants using the 90% cut-off are reported.
 
 ## Technical details
 
 Raw Data was downloaded by the following unix code
 
-
 ### Downloading the first part of sequences(29 of 88). 
 
-
 #### install homebrew with the following code
-```
+```{Unix}
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)" #for Linux
 ```
 
-```
+```{Unix}
 $ cat FPAC.txt | while read p; do echo $p; efetch -db nucleotide -id $p -format fasta > $p.fasta; done;
 ```
 ### install edirect
@@ -38,18 +32,16 @@ brew install homebrew/science/edirect
 
 ### We also used biopython to download the data with the following code
 
-```
+```{python}
 pip install biopython #install biopython
 ```
 
-```
+```{python}
 from Bio.Seq import Seq
 from Bio.Alphabet import IUPAC
 ```
 
-
-
-```
+```{python}
 # this is a stupid way. it can be done with a for loop
 import os
 from Bio import SeqIO
@@ -72,7 +64,7 @@ print(record)
 
 ### For the assembly files(59 of 88), the following code from biopython.org didn't work
 
-```
+```{python}
 import os
 from Bio import SeqIO
 from Bio import Entrez
@@ -103,7 +95,7 @@ To download Assembly files, we used Batch Entrez and used the list of Accession 
 
 ### Also, we find a code way to download these files with following one(Python)
 
-```
+```{python}
 def get_assembly_summary(id):
     """Get esummary for an entrez id"""
     from Bio import Entrez
@@ -146,18 +138,18 @@ def get_assemblies(term, download=True, path='assemblies'):
 ```
 
 ### Merging two fasta files
-```
+```{Unix}
 cat NC_017343.fasta NC_002953.fasta > mergedtwo.fasta
 ```
 ### Then, we perform sequence analysis using NCBI BLAST 
 
-```
+```{Unix}
 blastn -query mergedtwo.fasta -subject flp.fasta > blast.txt
 ```
 
 ### Aligning two sequences
 
-```
+```{Unix}
 muscle -profile -in1 NC_017343.fasta -in2 NC_002953.3.fasta -out combinedAlignment.fasta
 ```
 * Firstly, we use python to convert the "fasta" file into a "bed" one with this https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/blob/master/Data_directory/Tim_convert_fasta_to_bed.ipynb
@@ -179,5 +171,16 @@ But it cannot work very well.
 ### Comparing the amino acid sequence of each gene with the reference sequence
 * Each gene amino acid sequence was compared to the reference and all other sequences of that gene, and identified as variant if it was less than 80% or 90% homologous. Variants using the 90% cut-off are reported.
 
+### Technical Details
+* We downloaded the _Staphylococcus aureus_ sequences studied in the paper
+* We looked for genes coding for immune evasion complex proteins mentioned in the paper (but most of the gene id's were discontinued)
+* We decided to focus on one gene for this project (_flp_) in 2 different isolates(NC_017343 and NC_002953) representing different clonal complexes, CC1 and CC5, respectively.
+* We BLASTed the 2 whole-genome sequence against a reference _flp_ gene
+* We extracted the _flp_ gene sequence from both isolates
+* We aligned the _flp_ sequences using the MUSCLE module
+* We identified SNPs in these 2 _flp_ sequences
+* We translated the gene into amino acid using Biopython, and performed further analysis
 
+### Summary of Our Results
+* Indeed, the _flp_ gene of the 2 isolates varied in SNPs (14) and in sequence length. In addition, they have different predicted secondary protein structures. These findings are compatible with that of the authors, and since structure usually determines function, this shows that these 2 isolates may not both use FLIPr as an innate immune evasion technique. Hence, an example of how _S. aureus_ innate immune evasion is lineage-specific 
 
