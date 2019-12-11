@@ -1,7 +1,5 @@
 # Introduction
-introduces the original paper, explains the technical details of your replication of analyses and summarizes your replication of the original results
 
-* We replicated 2.2 Sequence analysis of S. aureus genes.
 
 ## Original Paper
 
