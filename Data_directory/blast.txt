@@ -1,0 +1,120 @@
+BLASTN 2.9.0+
+
+
+Reference: Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb
+Miller (2000), "A greedy algorithm for aligning DNA sequences", J
+Comput Biol 2000; 7(1-2):203-14.
+
+
+
+Database: User specified sequence set (Input: flp.fasta).
+           1 sequences; 386 total letters
+
+
+
+Query= NC_017343.1 Staphylococcus aureus subsp. aureus ECT-R 2 complete
+genome
+
+Length=2729540
+                                                                      Score        E
+Sequences producing significant alignments:                          (Bits)     Value
+
+NC_002952.2                                                           322        9e-89
+
+
+> NC_002952.2
+Length=386
+
+ Score = 322 bits (174),  Expect = 9e-89
+ Identities = 330/403 (82%), Gaps = 19/403 (5%)
+ Strand=Plus/Minus
+
+Query  1092389  ATTAATCCCAATAAATCGAGTCGATTTCACCGTTTTTAACAACTTTAATATTTTTTCTGT  1092448
+                ||| ||||||||| ||||||||||||||||| |||||||| |    ||||||||| ||||
+Sbjct  384      ATTGATCCCAATAGATCGAGTCGATTTCACCATTTTTAACTAAGGGAATATTTTTCCTGT  325
+
+Query  1092449  TCTCTTCTAAAGGACGAGTTAAGTCAAAAGTATAGTAATCTCTAGGACCACCATCTTTAA  1092508
+                | ||||||||||||||||||||||||||||||||| ||||| |||| || |||| | | |
+Sbjct  324      TTTCTTCTAAAGGACGAGTTAAGTCAAAAGTATAGAAATCTTTAGGTCCTCCATTTCTCA  265
+
+Query  1092509  TTCTGACAACTGCTTTCTTCACATCACCTTGGCTTAATTTTTTAACAATAAGGTACAGAT  1092568
+                || | || || ||||| |||||||| |||| |||||||||||| ||||| | ||| || |
+Sbjct  264      TTTTAACGACAGCTTTTTTCACATCGCCTTTGCTTAATTTTTTGACAATGATGTATAGGT  205
+
+Query  1092569  CATTAACAGTTTCAGCTTTGTAAGGAGTTAGATTTTTATCAGACTCTTTCATTAACTTAT  1092628
+                |||||||||||||| ||||  ||  |   |  ||  |  || | | |   ||| | | | 
+Sbjct  204      CATTAACAGTTTCACCTTT--AA--A---ACCTTCGT--CA-A-T-TA--ATTTAGT-AG  160
+
+Query  1092629  CAATACGTTCATCGTCCTTTTTAGCTTGATCTGCTAAATTTTTTGCGATTTCTAAACCTT  1092688
+                |   ||||||||| || |||||||||||||||||||| ||||| ||||||||||| ||||
+Sbjct  159      C---ACGTTCATCATCTTTTTTAGCTTGATCTGCTAACTTTTTAGCGATTTCTAATCCTT  103
+
+Query  1092689  TCCATTCATAACTAAAGAAAGCTTTAGCATCATTAGTTTGAGTTAAAAGACCTGCAGCGA  1092748
+                |||||||||||||||||||||||||||||||||| |  ||||||| |||||||| |||||
+Sbjct  102      TCCATTCATAACTAAAGAAAGCTTTAGCATCATTTGAATGAGTTAGAAGACCTGTAGCGA  43
+
+Query  1092749  TTACTGTAGATGCGATAATAGTTTTTGTGATAttttttttCAT  1092791
+                | ||||||||||| |||||   |||||| |||||||||| |||
+Sbjct  42       TGACTGTAGATGCAATAATTACTTTTGTAATATTTTTTT-CAT  1
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 996274435
+
+
+Query= NC_002953.3 Staphylococcus aureus strain MSSA476, complete genome
+
+Length=2799802
+                                                                      Score        E
+Sequences producing significant alignments:                          (Bits)     Value
+
+NC_002952.2                                                           241        3e-64
+
+
+> NC_002952.2
+Length=386
+
+ Score = 241 bits (130),  Expect = 3e-64
+ Identities = 159/173 (92%), Gaps = 1/173 (1%)
+ Strand=Plus/Minus
+
+Query  1164160  ATTAATTTATCAGCACGTTCATCGTCCTTTTTAGCTTGGTCTGCTAAATTTTTAGCGATT  1164219
+                |||||||||  |||||||||||| || ||||||||||| |||||||| ||||||||||||
+Sbjct  172      ATTAATTTAGTAGCACGTTCATCATCTTTTTTAGCTTGATCTGCTAACTTTTTAGCGATT  113
+
+Query  1164220  TCTAAACCTTTCCATTCATAACTAAAGAACGCCTTAGCATCATTAGTTTGAGTTAGAAGA  1164279
+                ||||| ||||||||||||||||||||||| || ||||||||||| |  ||||||||||||
+Sbjct  112      TCTAATCCTTTCCATTCATAACTAAAGAAAGCTTTAGCATCATTTGAATGAGTTAGAAGA  53
+
+Query  1164280  CCTGTAGCGATGACTGTAGATGCAATAATTACTTTTGTGATAttttttttCAT  1164332
+                |||||||||||||||||||||||||||||||||||||| |||||||||| |||
+Sbjct  52       CCTGTAGCGATGACTGTAGATGCAATAATTACTTTTGTAATATTTTTTT-CAT  1
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 1021920065
+
+
+  Database: User specified sequence set (Input: flp.fasta).
+    Posted date:  Unknown
+  Number of letters in database: 386
+  Number of sequences in database:  1
+
+
+
+Matrix: blastn matrix 1 -2
+Gap Penalties: Existence: 0, Extension: 2.5

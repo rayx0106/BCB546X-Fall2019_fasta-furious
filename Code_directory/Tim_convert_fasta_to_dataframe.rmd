@@ -1,0 +1,15 @@
+---
+title: "Tconvert_fastaToDataframe"
+author: "Tianqi(Tim)"
+date: "12/10/2019"
+output: html_document
+---
+# convert fasta into dataframe
+# https://www.rdocumentation.org/packages/phylotools/versions/0.2.2/topics/read.fasta
+
+```{r}
+install.packages("phylotools")
+library("phylotools")
+res <- read.fasta("https://raw.githubusercontent.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/master/Data_directory/HE681097.fasta")
+```
+
