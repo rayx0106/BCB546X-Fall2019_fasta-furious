@@ -101,7 +101,7 @@ To download Assembly files, we used Batch Entrez and used the list of Accession 
 4. Click "Retrieve" button
 5. Save all files
 
-### Also, we find a code way to download these files with following one
+### Also, we find a code way to download these files with following one(Python)
 
 ```
 def get_assembly_summary(id):
