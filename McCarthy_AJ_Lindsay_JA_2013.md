@@ -103,8 +103,15 @@ To download Assembly files, we used Batch Entrez and used the list of Accession 
 4. Click "Retrieve" button
 5. Save all files
 
+### Merging two fasta files
+```
+cat NC_017343.fasta NC_002953.fasta > mergedtwo.fasta
+```
 ### Then, we perform sequence analysis using NCBI BLAST 
 
+```
+blastn -query mergedtwo.fasta -subject flp.fasta > blast.txt
+```
 * Firstly, we use python to convert the "fasta" file into a "bed" one with this https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/blob/master/Data_directory/Tim_convert_fasta_to_bed.ipynb
 But it cannot work very well.
 
