@@ -1,0 +1,54 @@
+---
+title: "Export Seq"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Install Phylotools package and download fasta sequences to be read as dataframes
+```{r}
+install.packages("phylotools")
+library("phylotools")
+fasta1 <- read.fasta("https://raw.githubusercontent.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/master/Data_directory/NC_017343.fasta")
+fasta2 <- read.fasta("https://raw.githubusercontent.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/master/Data_directory/NC_002953.fasta")
+```
+
+# Assign a variable to the sequences in the seq.text column
+```{r}
+x <- fasta1$seq.text
+y <- fasta2$seq.text
+```
+
+# Select the gene of interest by specifying nucleotide positions identified through BLASTing and assign variable to them 
+```{r}
+substring(x,1092389,1092791)
+flpNC_017343 <- substring(x,1092389,1092791)
+substring(y,1164160,1164332)
+flpNC_002953 <- substring(y,1164160,1164332)
+```
+
+# Save genes as .txt file
+```{r}
+cat(flpNC_017343,file="flpNC_017343.txt")
+cat(flpNC_002953,file="flpNC_002953.txt")
+```
+
+# To save them as fasta files, convert sequences back to a dataframe with a "seq.name" and "seq.text" column:
+```{r}
+library(dplyr)
+table1 <- fasta1
+table1$seq.text[1] <- substring(x,1092389,1092791)
+table2 <- fasta2
+table2$seq.text[1] <- substring(y,1164160,1164332 )
+```
+
+# Export genes of interest as fasta files
+```{r}
+dat2fasta(table1, outfile = "flpNC_017343.fasta")
+dat2fasta(table2, outfile = "flpNC_002953.fasta")
+```
+
