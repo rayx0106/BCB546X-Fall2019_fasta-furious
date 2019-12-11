@@ -2,7 +2,10 @@
 
 # Downloading the first part of sequences(29 of 88).
 ## install homebrew with the following code
+```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)" #for Linux
+```
+
 ```
 $ cat FPAC.txt | while read p; do echo $p; efetch -db nucleotide -id $p -format fasta > $p.fasta; done;
 ```
