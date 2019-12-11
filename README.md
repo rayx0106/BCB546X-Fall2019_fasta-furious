@@ -23,6 +23,7 @@ https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/tree/master/Dat
 * Assembly files
 * Gene Fasta files
 * Alignment file
+* Visualization
 
 ## Code
 All code are in the directory of Code_directory https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/tree/master/Code_directory
@@ -31,6 +32,3 @@ All code are in the directory of Code_directory https://github.com/Kakashi-sense
 * The code for selecting gene of interest from whole-genome sequence and exporting it as a .fasta file
 * The code for detecting SNPs between an alignment
 * The code for efetch and translation
-
-
-

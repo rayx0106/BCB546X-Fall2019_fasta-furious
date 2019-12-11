@@ -9,7 +9,21 @@ The distribution and genetic variation of genes with characterised or hypothesiz
 
 The sequence of each gene in each genome was identified using BLAST searches (www.ncbi.nlm.nih.giv/blast).
 
-## Technical details
+### Our Workflow
+* We downloaded the _Staphylococcus aureus_ sequences studied in the paper
+* We looked for genes coding for immune evasion complex proteins mentioned in the paper (but most of the gene id's were discontinued)
+* We decided to focus on one gene for this project (_flp_) in 2 different isolates(NC_017343 and NC_002953) representing different clonal complexes, CC1 and CC5, respectively.
+* We BLASTed the 2 whole-genome sequence against a reference _flp_ gene
+* We extracted the _flp_ gene sequence from both isolates
+* We aligned the _flp_ sequences using the MUSCLE module
+* We identified SNPs in these 2 _flp_ sequences
+* We translated the gene into amino acid using Biopython, and performed further analysis
+
+### Summary of Our Results
+* Indeed, the _flp_ gene of the 2 isolates varied in SNPs (14) and in sequence length. In addition, they have different predicted secondary protein structures. These findings are compatible with that of the authors, and since structure usually determines function, this shows that these 2 isolates may not both use FLIPr as an innate immune evasion technique. Hence, an example of how _S. aureus_ innate immune evasion is lineage-specific 
+
+
+## Technical Details
 
 Raw Data was downloaded by the following unix code
 
@@ -170,17 +184,3 @@ But it cannot work very well.
 
 ### Comparing the amino acid sequence of each gene with the reference sequence
 * Each gene amino acid sequence was compared to the reference and all other sequences of that gene, and identified as variant if it was less than 80% or 90% homologous. Variants using the 90% cut-off are reported.
-
-### Technical Details
-* We downloaded the _Staphylococcus aureus_ sequences studied in the paper
-* We looked for genes coding for immune evasion complex proteins mentioned in the paper (but most of the gene id's were discontinued)
-* We decided to focus on one gene for this project (_flp_) in 2 different isolates(NC_017343 and NC_002953) representing different clonal complexes, CC1 and CC5, respectively.
-* We BLASTed the 2 whole-genome sequence against a reference _flp_ gene
-* We extracted the _flp_ gene sequence from both isolates
-* We aligned the _flp_ sequences using the MUSCLE module
-* We identified SNPs in these 2 _flp_ sequences
-* We translated the gene into amino acid using Biopython, and performed further analysis
-
-### Summary of Our Results
-* Indeed, the _flp_ gene of the 2 isolates varied in SNPs (14) and in sequence length. In addition, they have different predicted secondary protein structures. These findings are compatible with that of the authors, and since structure usually determines function, this shows that these 2 isolates may not both use FLIPr as an innate immune evasion technique. Hence, an example of how _S. aureus_ innate immune evasion is lineage-specific 
-
