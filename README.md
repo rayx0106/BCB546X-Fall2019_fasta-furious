@@ -12,6 +12,8 @@ This is the repository of the final project for Fasta & Furious. Inside are the 
 
 ### Final Project Presentation Slides
 https://docs.google.com/presentation/d/1WagX6Mk48KvoV5h-uBQCnPhbDSnagouVUTd6ZwwnYpY/edit#slide=id.p
+### Following is the note for slides
+https://docs.google.com/document/d/1rR4V9MGWu-MNmuisx6vH2Ha1m0j_IoFxEzFS2vW2P9w/edit
 
 ## Data
 All date are in the directory of Data_directory
