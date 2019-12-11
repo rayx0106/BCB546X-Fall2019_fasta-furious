@@ -19,7 +19,8 @@ https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/tree/master/Dat
 * SNP and InDel results from author were downloaded from https://doi.org/10.1016/j.meegid.2013.06.012
 * Nucleotide Fasta files
 * Assembly files
-* 
+* Gene Fasta files
+* Alignment file
 
 ## Code
 All code are in the directory of Code_directory https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/tree/master/Code_directory
