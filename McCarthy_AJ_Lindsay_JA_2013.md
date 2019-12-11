@@ -114,8 +114,10 @@ blastn -query mergedtwo.fasta -subject flp.fasta > blast.txt
 ```
 
 ### Aligning two sequences
-muscle -profile -in1 NC_017343.fasta -in2 NC_002953.3.fasta -out combinedAlignment.fasta
 
+```
+muscle -profile -in1 NC_017343.fasta -in2 NC_002953.3.fasta -out combinedAlignment.fasta
+```
 * Firstly, we use python to convert the "fasta" file into a "bed" one with this https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/blob/master/Data_directory/Tim_convert_fasta_to_bed.ipynb
 But it cannot work very well.
 
