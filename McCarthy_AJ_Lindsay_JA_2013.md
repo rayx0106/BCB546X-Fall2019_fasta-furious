@@ -98,7 +98,7 @@ print(record)
 To download Assembly files, we used Batch Entrez and used the list of Accession numbers as the input file.
 1. Use the web of (https://www.ncbi.nlm.nih.gov/sites/batchentrez)
 2. Select "Assembly" in the Database drop-down menu
-3. Click "Choose File" to submit the test file of all Genome names
+3. Click "Choose File" to submit the test file of all Genome names(https://raw.githubusercontent.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/master/Data_directory/Assembly.txt)
 4. Click "Retrieve" button
 5. Save all files
 
