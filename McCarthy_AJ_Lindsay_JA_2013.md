@@ -69,20 +69,7 @@ if not os.path.isfile(filename):
 print("Parsing...")
 record = SeqIO.read(filename, "fasta")
 print(record)
-
-Entrez.email = "mahsa.askaryhemmat@gmail.com"  # Always tell NCBI who you are
-filename = "TL_NC_002953.fasta"
-if not os.path.isfile(filename):
-    # Downloading...
-    net_handle = Entrez.efetch(db="nucleotide", id="NC_002953", rettype="fasta", retmode="text")
-    out_handle = open(filename, "w")
-    out_handle.write(net_handle.read())
-    out_handle.close()
-    net_handle.close()
-    print("Saved")
-print("Parsing...")
-record = SeqIO.read(filename, "fasta")
-print(record)
+# We use this code download files one by one
 ```
 
 ### For the assembly files(59 of 88), the folloing code from biopython.org didn't work
