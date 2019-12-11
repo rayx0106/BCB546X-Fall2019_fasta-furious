@@ -113,6 +113,8 @@ print(record)
 ### Then, we perform sequence analysis using NCBI BLAST 
 
 * Firstly, we use python to convert the "fasta" file into a "bed" one with this https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/blob/master/Data_directory/Tim_convert_fasta_to_bed.ipynb
+But it cannot work very well.
+
 
 * Then we use R to convert the "fasta" into a dataframe with the following code https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/blob/master/Data_directory/Tim_convert_fasta_to_dataframe.rmd.
 
