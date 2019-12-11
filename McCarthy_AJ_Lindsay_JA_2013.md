@@ -108,7 +108,7 @@ print(record)
 
 ### So, we did it manually. 
 
-##### Mahsa gonna write this part
+To download Assembly files, we used Batch Entrez and used the list of Accession numbers as the input file.
 
 ### Then, we perform sequence analysis using NCBI BLAST 
 
