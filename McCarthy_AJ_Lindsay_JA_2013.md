@@ -171,7 +171,7 @@ But it cannot work very well.
 ### Comparing the amino acid sequence of each gene with the reference sequence
 * Each gene amino acid sequence was compared to the reference and all other sequences of that gene, and identified as variant if it was less than 80% or 90% homologous. Variants using the 90% cut-off are reported.
 
-### Our Workflow
+### Technical Details
 * We downloaded the _Staphylococcus aureus_ sequences in the paper
 * We looked for genes coding for immune evasion complex proteins mentioned in the paper (but most of the gene id's were discontinued)
 * We decided to focus on one gene for this project (_flp_) in 2 different isolates(NC_017343 and NC_002953) representing different clonal complexes, CC1 and CC5, respectively.
