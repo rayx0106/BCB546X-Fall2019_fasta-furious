@@ -95,7 +95,7 @@ print(record)
 
 ### So, we did it manually. 
 
-To download Assembly files, we used Batch Entrez(https://www.ncbi.nlm.nih.gov/sites/batchentrezand) and used the list of Accession numbers as the input file.
+To download Assembly files, we used Batch Entrez(https://www.ncbi.nlm.nih.gov/sites/batchentrez) and used the list of Accession numbers as the input file.
 
 ### Then, we perform sequence analysis using NCBI BLAST 
 
