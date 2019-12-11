@@ -16,11 +16,11 @@ Raw Data was downloaded by the following unix code
 ### Downloading the first part of sequences(29 of 88). 
 
 #### install homebrew with the following code
-```
+```{Unix}
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)" #for Linux
 ```
 
-```
+```{Unix}
 $ cat FPAC.txt | while read p; do echo $p; efetch -db nucleotide -id $p -format fasta > $p.fasta; done;
 ```
 ### install edirect
@@ -138,18 +138,18 @@ def get_assemblies(term, download=True, path='assemblies'):
 ```
 
 ### Merging two fasta files
-```
+```{Unix}
 cat NC_017343.fasta NC_002953.fasta > mergedtwo.fasta
 ```
 ### Then, we perform sequence analysis using NCBI BLAST 
 
-```
+```{Unix}
 blastn -query mergedtwo.fasta -subject flp.fasta > blast.txt
 ```
 
 ### Aligning two sequences
 
-```
+```{Unix}
 muscle -profile -in1 NC_017343.fasta -in2 NC_002953.3.fasta -out combinedAlignment.fasta
 ```
 * Firstly, we use python to convert the "fasta" file into a "bed" one with this https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/blob/master/Data_directory/Tim_convert_fasta_to_bed.ipynb
