@@ -106,3 +106,14 @@ record = SeqIO.read(filename, "assembly")
 print(record)
 ```
 
+### So, we did it manually. 
+
+##### Mahsa gonna write this part
+
+### Then, we try to 
+
+* Firstly, we use python to convert the "fasta" file into a "bed" one with this https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/blob/master/Data_directory/Tim_convert_fasta_to_bed.ipynb
+
+* Then we use R to convert the "fasta" into a dataframe with the following code https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/blob/master/Data_directory/Tim_convert_fasta_to_dataframe.rmd.
+
+
