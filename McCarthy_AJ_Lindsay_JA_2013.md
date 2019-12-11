@@ -95,7 +95,12 @@ print(record)
 
 ### So, we did it manually. 
 
-To download Assembly files, we used Batch Entrez(https://www.ncbi.nlm.nih.gov/sites/batchentrez) and used the list of Accession numbers as the input file.
+To download Assembly files, we used Batch Entrez and used the list of Accession numbers as the input file.
+1. Use the web of (https://www.ncbi.nlm.nih.gov/sites/batchentrez)
+2. Select "Assembly" in the Database drop-down menu
+3. Click "Choose File" to submit the test file of all Genome names
+4. Click "Retrieve" button
+5. Save all files
 
 ### merging two fasta files
 
