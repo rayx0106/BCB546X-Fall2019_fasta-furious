@@ -17,7 +17,7 @@ Sequences of genes were subsequently aligned using the ClustalW alignment and th
 
 ## Technical details
 
-XXX Data was downloaded by the following unix code
+Raw Data was downloaded by the following unix code
 
 
 ### Downloading the first part of sequences(29 of 88). 
@@ -85,7 +85,7 @@ record = SeqIO.read(filename, "fasta")
 print(record)
 ```
 
-### For the assembly files, the folloing code from biopython.org didn't work
+### For the assembly files(59 of 88), the folloing code from biopython.org didn't work
 
 ```
 import os
