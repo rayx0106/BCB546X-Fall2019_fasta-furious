@@ -7,7 +7,7 @@ introduces the original paper, explains the technical details of your replicatio
 
 The article of “Staphylococcus aureus Innate Immune Evasion is Lineage-Specific: A Bioinfomatics Study” by Alex J.McCarthy and Jodi A.Lindsay, 2013 was used for our final project. https://www.sciencedirect.com/science/article/pii/S1567134813002372?via%3Dihub. We replicated part 2.2, “Sequence analysis of S. aureus genes”.
 
-The distribution and genetic variation of genes with characterised or hypothesized roles in inhibiting complement, chemotaxis or neutrophil function was investigated. In total, 43 genes were investigated as shown in XXXX.
+The distribution and genetic variation of genes with characterised or hypothesized roles in inhibiting complement, chemotaxis or neutrophil function was investigated. In total, 43 genes were investigated.
 
 The sequence of each gene in each genome was identified using BLAST searches (www.ncbi.nlm.nih.giv/blast).
 
