@@ -23,13 +23,11 @@ https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/tree/master/Dat
 
 ## Code
 All code are in the directory of Code_directory https://github.com/Kakashi-sensei/BCB546X-Fall2019_fasta-furious/tree/master/Code_directory
-* The code that can convert .fasta file into .bed one
-* The code that can convert .fasta file into a dataframe
-* 
+* The code for converting .fasta file into .bed one
+* The code for converting .fasta file into a dataframe
+* The code for selecting gene of interest from whole-genome sequence and exporting it as a .fasta file
+* The code for detecting SNPs between an alignment
+* The code for efetch and translation
 
-
-## Figures
-* BLAST allignments
-* SNP/InDel identification
 
 
